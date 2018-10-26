@@ -7,7 +7,9 @@ To download python :- https://www.python.org/downloads/
 
 ## DOWNLOAD PYAME:-
 To download pygame module you can use the command * pip3 install pygame * in your terminal window
-or follow the link here please remember to download considering your computer OS :-https://www.pygame.org/download.shtml
+or follow the link here please remember to download considering your computer OS :-
+
+https://www.pygame.org/download.shtml
 
 ## PROJECT 1
 
