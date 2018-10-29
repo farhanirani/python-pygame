@@ -5,12 +5,12 @@ I made all of my projects using python3, it will be replaced in the future by it
 
 To download python :- https://www.python.org/downloads/
 
-## DOWNLOAD PYAME:-
+## DOWNLOAD PYGAME:-
 To download pygame module you can use the command * pip3 install pygame * in your terminal window
 or follow the link here please remember to download considering your computer OS :-
 
 https://www.pygame.org/download.shtml
 
-## PROJECT 1
+### RaceGame with obstacles
 
 I created a racegame using the pygame python module where you have to avoid the obstacles and the gamde will keep track of the number of obstacles avoided. The difficulty of the game will increase with more obstacles you avoid. I have also attached the car png image I used for the game
