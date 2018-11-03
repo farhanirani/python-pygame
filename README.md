@@ -3,10 +3,14 @@
 ## Download Python3:-
 I made all of my projects using python3, it will be replaced in the future by its succesor but I belive the changes in the syntax will be minimal so if you have python version other than 3.X look out for changes in my code
 
-To download python :- https://www.python.org/downloads/
+[To download python](https://www.python.org/downloads/)
 
 ## DOWNLOAD PYGAME:-
-To download pygame module you can use the command * pip3 install pygame * in your terminal window
+To download pygame module you can use the command 
+```
+pip3 install pygame
+```
+in your terminal window
 or follow the link here please remember to download considering your computer OS :-
 
 https://www.pygame.org/download.shtml
