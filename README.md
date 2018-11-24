@@ -24,3 +24,6 @@ I created a racegame using the pygame python module where you have to avoid the 
 
 I created the classic space invaders game using pygame moduleof python. I used sprite classes to create varioius sprites for this project.All the images and sound I used are there in the image and sound folders.
 
+
+### Snake game
+I created the rtro snake game but here you have to avoid the window boundaries. The more you eat the bigger your snake gets. Added opening menu screen and ending screen with background music. Attaching all the assests with it in the repositories
