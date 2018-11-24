@@ -26,4 +26,4 @@ I created the classic space invaders game using pygame moduleof python. I used s
 
 
 ### Snake game
-I created the rtro snake game but here you have to avoid the window boundaries. The more you eat the bigger your snake gets. Added opening menu screen and ending screen with background music. Attaching all the assests with it in the repositories
+I created the retro snake game but here you have to avoid the window boundaries. The more you eat the bigger your snake gets. Added opening menu screen and ending screen with background music. Attaching all the assests with it in the repositories
