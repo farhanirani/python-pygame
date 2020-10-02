@@ -1,7 +1,6 @@
 import time
 import pygame
 import random
-from colors import *
 import os
 
 # we set up the screen size and the fps
@@ -57,7 +56,7 @@ class Segment(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface([segment_width,segment_height])
-        self.image.fill(black)
+        self.image.fill((0,0,0))
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -67,7 +66,7 @@ class Apple(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.transform.scale(apple1,(25,25))
-        self.image.set_colorkey(white)
+        self.image.set_colorkey((255,255,255))
         self.rect = self.image.get_rect()
         self.rect.x = random.randrange(30,screen_width-30)
         self.rect.y = random.randrange(30,screen_height-30)

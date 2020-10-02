@@ -1,7 +1,6 @@
 # this is the skeleton for all tyhe pygames
 import pygame
 import random
-from colors import *
 import os
 
 # we set up the screen size and the fps
@@ -18,14 +17,14 @@ clock = pygame.time.Clock()
 
 # we set up the assests
 game_folder = os.path.dirname(__file__)
-img_folder = os.path.join(game_folder,'image')
+img_folder = os.path.join(game_folder,'images')
 snd_folder = os.path.join(game_folder,'sound')
 
 font_name = pygame.font.match_font('Arial')
 # we create a function to draw text
 def text(surface,text,size,x,y):
     font = pygame.font.SysFont(font_name,size)
-    text_surface = font.render(text,True,white)
+    text_surface = font.render(text,True,(255,255,255))
     text_rect = text_surface.get_rect()
     text_rect.midtop =(x,y)
     surface.blit(text_surface,text_rect)
@@ -42,7 +41,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.transform.scale(rocket,(50,38))
-        self.image.set_colorkey(black)
+        self.image.set_colorkey((0,0,0))
         self.rect = self.image.get_rect()
         self.radius = 21
         #pygame.draw.circle(self.image,red,self.rect.center,self.radius)
@@ -86,7 +85,7 @@ class Mobs(pygame.sprite.Sprite):
     def __init__(self): # we initialise all the variables
         pygame.sprite.Sprite.__init__(self)
         self.image_orig = pygame.transform.scale(meteor,(50,48))
-        self.image_orig.set_colorkey(black)
+        self.image_orig.set_colorkey((0,0,0))
         self.image = self.image_orig.copy()
         self.rect = self.image.get_rect()
         self.radius = int(self.rect.width*0.9/2)
@@ -167,16 +166,18 @@ def draw_shield_bar(surf,x,y,pct):
     fill =(pct/100)*bar_length
     outline_rect = pygame.Rect(x,y,bar_length,bar_height)
     fill_rect = pygame.Rect(x,y,fill,bar_height)
-    pygame.draw.rect(surf,green,fill_rect)
-    pygame.draw.rect(surf,white,outline_rect,2)
+    pygame.draw.rect(surf,(0,255,0),fill_rect)
+    pygame.draw.rect(surf,(255,255,255),outline_rect,2)
 
 
 # we load the graphics here 
+logoIMG = pygame.image.load(os.path.join(img_folder,"logoIMG.png"))
+pygame.display.set_icon(logoIMG)
 background = pygame.image.load(os.path.join(img_folder,'background.png')).convert()
 background_rect = background.get_rect()
 rocket = pygame.image.load(os.path.join(img_folder,'playership3_red.png')).convert()
 rocket_miniature = pygame.transform.scale(rocket,(25,15))
-rocket_miniature.set_colorkey(black)
+rocket_miniature.set_colorkey((0,0,0))
 meteor = pygame.image.load(os.path.join(img_folder,'meteorBrown_big1.png')).convert()
 laser = pygame.image.load(os.path.join(img_folder,'laserRed06.png')).convert()
 explosion_anim ={}
@@ -188,12 +189,12 @@ for i in range(0,8):
     filename1 = f'sonicExplosion0{i}.png'
     img1 = pygame.image.load(os.path.join(img_folder,filename1)).convert()
     img = pygame.image.load(os.path.join(img_folder,filename)).convert()
-    img.set_colorkey(black)
+    img.set_colorkey((0,0,0))
     img_lg = pygame.transform.scale(img,(75,75))
     explosion_anim['lg'].append(img_lg)
     img_sm = pygame.transform.scale(img,(32,32))
     explosion_anim['sm'].append(img_sm)
-    img1.set_colorkey(black)
+    img1.set_colorkey((0,0,0))
     explosion_anim['player'].append(img1)
 # we creare the function for sprites so that we can manage all the sprites
 
@@ -274,7 +275,7 @@ while running:
     
     # here we fill the background
 
-    screen.fill(black)
+    screen.fill((0,0,0))
     # we darw the background here (image,size)
     screen.blit(background,background_rect)
     all_sprites.draw(screen)
